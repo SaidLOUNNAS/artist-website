@@ -141,7 +141,7 @@
     });
   }
 
-  // :: 5.0 CounterUp Active Code
+  //:: 5.0 CounterUp Active Code
   if ($.fn.counterUp) {
     $('.counter').counterUp({
       delay: 10,
@@ -149,76 +149,68 @@
     });
   }
 
-  // :: 6.0 Sticky Active Code
+  //:: 6.0 Sticky Active Code
   if ($.fn.sticky) {
     $('.musica-main-menu').sticky({
       topSpacing: 0,
     });
   }
 
-  // :: 7.0 Progress Bar Active Code
-  if ($.fn.circleProgress) {
-    $('#circle').circleProgress({
-      size: 160,
-      emptyFill: 'rgba(0, 0, 0, .0)',
-      fill: '#cc1573',
-      thickness: '4',
-      reverse: true,
-    });
-    $('#circle2').circleProgress({
-      size: 160,
-      emptyFill: 'rgba(0, 0, 0, .0)',
-      fill: '#cc1573',
-      thickness: '4',
-      reverse: true,
-    });
-    $('#circle3').circleProgress({
-      size: 160,
-      emptyFill: 'rgba(0, 0, 0, .0)',
-      fill: '#cc1573',
-      thickness: '4',
-      reverse: true,
-    });
-    $('#circle4').circleProgress({
-      size: 160,
-      emptyFill: 'rgba(0, 0, 0, .0)',
-      fill: '#cc1573',
-      thickness: '4',
-      reverse: true,
-    });
-  }
+  // // :: 7.0 Progress Bar Active Code
+  // if ($.fn.circleProgress) {
+  //   $('#circle').circleProgress({
+  //     size: 160,
+  //     emptyFill: 'rgba(0, 0, 0, .0)',
+  //     fill: '#cc1573',
+  //     thickness: '4',
+  //     reverse: true,
+  //   });
+  //   $('#circle2').circleProgress({
+  //     size: 160,
+  //     emptyFill: 'rgba(0, 0, 0, .0)',
+  //     fill: '#cc1573',
+  //     thickness: '4',
+  //     reverse: true,
+  //   });
+  //   $('#circle3').circleProgress({
+  //     size: 160,
+  //     emptyFill: 'rgba(0, 0, 0, .0)',
+  //     fill: '#cc1573',
+  //     thickness: '4',
+  //     reverse: true,
+  //   });
+  //   $('#circle4').circleProgress({
+  //     size: 160,
+  //     emptyFill: 'rgba(0, 0, 0, .0)',
+  //     fill: '#cc1573',
+  //     thickness: '4',
+  //     reverse: true,
+  //   });
+  // }
 
   // :: 8.0 audioPlayer Active Code
   if ($.fn.audioPlayer) {
     $('audio').audioPlayer();
   }
 
-  // :: 9.0 Tooltip Active Code
+  //:: 9.0 Tooltip Active Code
   if ($.fn.tooltip) {
     $('[data-toggle="tooltip"]').tooltip();
   }
 
-  // :: 10.0 niceScroll Active Code
-  if ($.fn.niceScroll) {
-    $('.album-all-songs').niceScroll({
-      background: '#fff',
-    });
-  }
+  //:: 10.0 niceScroll Active Code
+  // if ($.fn.niceScroll) {
+  //   $('.album-all-songs').niceScroll({
+  //     background: '#fff',
+  //   });
+  // }
 
-  // :: 11.0 ScrollDown Active Code
-  $('#scrollDown').on('click', function () {
-    $('html, body').animate(
-      {
-        scrollTop: $('#about').offset().top - 85,
-      },
-      1500
-    );
-  });
+  //:: 11.0 ScrollDown Active Code
 
   // :: 12.0 prevent default a click
-  $('a[href="#"]').on('click', function ($) {
-    $.preventDefault();
-  });
+  // $('a[href="#"]').on('click', function ($) {
+  //   $.preventDefault();
+  // });
 
   // :: 13.0 wow Active Code
   if (browserWindow.width() > 767) {
@@ -236,66 +228,169 @@ window.onclick = function (event) {
   }
 };
 // add the concerts
+const ref = firebase.database().ref('users');
+//$('#emp-table').find('tbody').html('');
+var new_html = '';
+window.onload = function () {
+  initApp();
+  displayEmpData();
+};
 
-$(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-  var actions = $('table td:last-child').html();
-  // Append table with add row form on add new button click
-  $('.add-new').click(function () {
-    $(this).attr('disabled', 'disabled');
-    var index = $('table tbody tr:last-child').index();
-    var row =
-      '<tr>' +
-      '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-      '<td><input type="text" class="form-control" name="department" id="localisation"></td>' +
-      '<td><input type="date" class="form-control" name="phone" id="date"></td>' +
-      '<td><input type="time" class="form-control" name="phone" id="heure"></td>' +
-      '<td>' +
-      actions +
-      '</td>' +
-      '</tr>';
-    $('table').append(row);
-    $('table tbody tr')
-      .eq(index + 1)
-      .find('.add, .edit')
-      .toggle();
-    $('[data-toggle="tooltip"]').tooltip();
+function initApp() {
+  document.getElementById('add_emp').addEventListener('click', addNewEmp, false);
+}
+// INSERT DATA
+function addNewEmp() {
+  var name = document.getElementById('name').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+  var map = document.getElementById('map').value;
+  var comp = document.getElementById('comp').value;
+  var timeStamp = new Date().getTime();
+  var empID = 'EMP_' + timeStamp;
+  ref.child(empID).set({
+    name: name,
+    date: date,
+    time: time,
+    map: map,
+    comp: comp,
+    emp_id: empID,
   });
-  // Add row on add button click
-  $(document).on('click', '.add', function () {
-    var empty = false;
-    var input = $(this).parents('tr').find('input[type="text"]');
-    input.each(function () {
-      if (!$(this).val()) {
-        $(this).addClass('error');
-        empty = true;
-      } else {
-        $(this).removeClass('error');
-      }
-    });
-    $(this).parents('tr').find('.error').first().focus();
-    if (!empty) {
-      input.each(function () {
-        $(this).parent('td').html($(this).val());
-      });
-      $(this).parents('tr').find('.add, .edit').toggle();
-      $('.add-new').removeAttr('disabled');
-    }
+  $('#name').val('');
+  $('#date').val('');
+  $('#time').val('');
+  $('#map').val('');
+  $('#comp').val('');
+}
+
+//Display Employee Data
+
+function displayEmpData() {
+  ref.on('child_added', function (empData) {
+    console.log(empData.val());
+
+    new_html += '<tr id="' + empData.val().emp_id + '">';
+    new_html += '<td id="name_' + empData.val().emp_id + '">' + empData.val().name + '</td>';
+    new_html += '<td id="date_' + empData.val().emp_id + '">' + empData.val().date + '</td>';
+    new_html += '<td id="time_' + empData.val().emp_id + '">' + empData.val().time + '</td>';
+    new_html += '<td id="map_' + empData.val().emp_id + '">' + empData.val().map + '</td>';
+    new_html += '<td id="comp_' + empData.val().emp_id + '">' + empData.val().comp + '</td>';
+    new_html += '<td><a  class="edit" data-toggle="modal"><i class="material-icons editEmp"';
+    new_html += 'data-toggle="tooltip" data-emp-id="' + empData.val().emp_id + '" title="Edit">&#xE254;</i></a>';
+    new_html += '<a class="" data-toggle="modal"><i class="material-icons delete"';
+    new_html += 'data-toggle="tooltip"  data-emp-id="' + empData.val().emp_id + '" title="Delete">&#xE872;</i></a>';
+    new_html += '</td>';
+    new_html += '</tr>';
+
+    $('#emp-table').html(new_html);
   });
-  // Edit row on edit button click
-  $(document).on('click', '.edit', function () {
-    $(this)
-      .parents('tr')
-      .find('td:not(:last-child)')
-      .each(function () {
-        $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-      });
-    $(this).parents('tr').find('.add, .edit').toggle();
-    $('.add-new').attr('disabled', 'disabled');
+
+  //$('#emp-table').find('tbody').append(new_html);
+}
+
+$(document).on('click', '.delete', function () {
+  var emp_id = $(this).attr('data-emp-id');
+
+  ref.child(emp_id).once('value', function (emp) {
+    var modal_header = '';
+
+    modal_header += '<h4 class="modal-title">Supprimer ' + emp.val().name + '</h4>';
+    modal_header += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+
+    var modal_body = '';
+    modal_body += '<p>Voulez-vous vraiment supprimer ces enregistrements?</p>';
+    modal_body += '<p class="text-warning"><small></small></p>';
+    var modal_footer = '';
+    modal_footer += '<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">';
+    modal_footer += '<input type="submit" data-dismiss="modal" data-emp-id="' + emp_id + '" class="btn btn-danger deleteEmpData" value="Delete">';
+    $('#deleteEmployeeModal').find('.modal-header').html(modal_header);
+    $('#deleteEmployeeModal').find('.modal-body').html(modal_body);
+    $('#deleteEmployeeModal').find('.modal-footer').html(modal_footer);
+    $('#deleteEmployeeModal').modal();
   });
-  // Delete row on delete button click
-  $(document).on('click', '.delete', function () {
-    $(this).parents('tr').remove();
-    $('.add-new').removeAttr('disabled');
+});
+
+$(document).on('click', '.editEmp', function () {
+  var emp_id = $(this).attr('data-emp-id');
+
+  ref.child(emp_id).once('value', function (emp) {
+    var modal_header = '';
+
+    modal_header += '<h4 class="modal-title">Ajouter ' + emp.val().name + '</h4>';
+    modal_header += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+
+    var modal_body = '';
+    modal_body += '<div class="form-group">';
+    modal_body += '<label>Name</label>';
+    modal_body += '<input id="edit-name" type="text" value="' + emp.val().name + '" class="form-control" required>';
+    modal_body += '</div>';
+
+    modal_body += '<div class="form-group">';
+    modal_body += '<label>Date</label>';
+    modal_body += '<input type="date" id="edit-date" value="' + emp.val().date + '" class="form-control" required>';
+    modal_body += '</div>';
+
+    modal_body += '<div class="form-group">';
+    modal_body += '<label>Heure</label>';
+    modal_body += '<input type="time" id="edit-date" value="' + emp.val().time + '" class="form-control" required>';
+    modal_body += '</div>';
+
+    modal_body += '<div class="form-group">';
+    modal_body += '<label>Localisation</label>';
+    modal_body += '<input id="edit-map" type="text" value="' + emp.val().map + '" class="form-control" required>';
+    modal_body += '</div>';
+
+    modal_body += '<div class="form-group">';
+    modal_body += '<label>Complet</label>';
+    modal_body += '<input id="edit-comp" type="text" value="' + emp.val().comp + '" class="form-control" required>';
+    modal_body += '</div>';
+
+    var modal_footer = '';
+    modal_footer += '<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">';
+    modal_footer += '<input type="submit" data-dismiss="modal" data-emp-id="' + emp_id + '"  class="btn btn-danger updateEmpData" value="Save">';
+    $('#editEmployeeModal').find('.modal-header').html(modal_header);
+    $('#editEmployeeModal').find('.modal-body').html(modal_body);
+    $('#editEmployeeModal').find('.modal-footer').html(modal_footer);
+    $('#editEmployeeModal').modal();
   });
+});
+
+$(document).on('click', '.deleteEmpData', function () {
+  var emp_id = $(this).attr('data-emp-id');
+
+  ref.child(emp_id).remove();
+
+  $('#' + emp_id).remove();
+});
+
+$(document).on('click', '.updateEmpData', function () {
+  var emp_id = $(this).attr('data-emp-id');
+
+  var name = document.getElementById('edit-name').value;
+  var date = document.getElementById('edit-date').value;
+  var time = document.getElementById('edit-time').value;
+  var map = document.getElementById('edit-map').value;
+  var comp = document.getElementById('edit-comp').value;
+
+  ref.child(emp_id).update({
+    name: name,
+    date: date,
+    time: time,
+    map: map,
+    comp: comp,
+  });
+
+  $('#name_' + emp_id).html(name);
+  $('#date_' + emp_id).html(date);
+  $('#time_' + emp_id).html(time);
+  $('#map_' + emp_id).html(map);
+  $('#comp' + emp_id).html(comp);
+});
+
+$(document).on('click', '.dltAllData', function () {
+  var emp_id = $(this).attr('data-emp-id');
+
+  ref.remove();
+
+  $('#emp-table').remove();
 });
