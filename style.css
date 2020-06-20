@@ -221,6 +221,9 @@ img {
   text-transform: uppercase;
   font-weight: 900;
 }
+.section-heading .blog {
+  color: #000;
+}
 /* add the concerts */
 .table-wrapper {
   padding: 20px 1px;
@@ -735,9 +738,9 @@ table.table .avatar {
 
 /* :: 3.8.0 Musica Button */
 .musica-btn {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
+  background: #4bec0b;
+  background: -webkit-linear-gradient(to right, #4bec0b, #5722a9);
+  background: linear-gradient(to right, #4bec0b, #5722a9);
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   position: relative;
@@ -2467,7 +2470,7 @@ table.table .avatar {
 }
 .single-blog-post .post-title:hover,
 .single-blog-post .post-title:focus {
-  color: #ff0707; /*#bd177a*/
+  color: #4be90d; /*#bd177a*/
 }
 @media only screen and (max-width: 767px) {
   .single-blog-post .post-title {
@@ -3011,5 +3014,11 @@ ul.social-footer2 li a {
   transition: all 250ms ease-in-out 0s;
 }
 /* ====== The End ====== */
-
+@media screen and (max-width: 600px) {
+.entry-content table,
+.entry-content table tbody,
+.entry-content table tr,
+.entry-content table td {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

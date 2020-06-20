@@ -1,3 +1,21 @@
+// Logout
+
+const btnSignOut = document.getElementById('btnLogout');
+btnSignOut.addEventListener('click', (e) => {
+  firebase
+    .auth()
+    .signOut()
+    .then(function () {
+      // Sign-out successful.
+      window.location = '../../admin.html';
+      console.log('ok');
+    })
+    .catch(function (error) {
+      // An error happened.
+      alert('erreur');
+    });
+});
+
 const ref = firebase.database().ref('users');
 //$('#emp-table').find('tbody').html('');
 var new_html = '';
@@ -15,7 +33,6 @@ function addNewEmp() {
   var date = document.getElementById('date').value;
   var time = document.getElementById('time').value;
   var map = document.getElementById('map').value;
-  var comp = document.getElementById('comp').value;
   var timeStamp = new Date().getTime();
   var empID = 'EMP_' + timeStamp;
   ref.child(empID).set({
@@ -23,14 +40,12 @@ function addNewEmp() {
     date: date,
     time: time,
     map: map,
-    comp: comp,
     emp_id: empID,
   });
   $('#name').val('');
   $('#date').val('');
   $('#time').val('');
   $('#map').val('');
-  $('#comp').val('');
 }
 
 //Display Employee Data
@@ -42,7 +57,6 @@ function displayEmpData() {
     new_html += '<td id="date_' + empData.val().emp_id + '">' + empData.val().date + '</td>';
     new_html += '<td id="time_' + empData.val().emp_id + '">' + empData.val().time + '</td>';
     new_html += '<td id="map_' + empData.val().emp_id + '">' + empData.val().map + '</td>';
-    new_html += '<td id="comp_' + empData.val().emp_id + '">' + empData.val().comp + '</td>';
     new_html += '<td><a  class="edit" data-toggle="modal"><i class="material-icons editEmp"';
     new_html += 'data-toggle="tooltip" data-emp-id="' + empData.val().emp_id + '" title="Edit">&#xE254;</i></a>';
     new_html += '<a class="" data-toggle="modal"><i class="material-icons delete"';
@@ -106,11 +120,6 @@ $(document).on('click', '.editEmp', function () {
     modal_body += '<input id="edit-map" type="text" value="' + emp.val().map + '" class="form-control" required>';
     modal_body += '</div>';
 
-    modal_body += '<div class="form-group">';
-    modal_body += '<label>Complet</label>';
-    modal_body += '<input id="edit-comp" type="text" value="' + emp.val().comp + '" class="form-control" required>';
-    modal_body += '</div>';
-
     var modal_footer = '';
     modal_footer += '<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">';
     modal_footer += '<input type="submit" data-dismiss="modal" data-emp-id="' + emp_id + '"  class="btn btn-danger updateEmpData" value="Save">';
@@ -136,7 +145,6 @@ $(document).on('click', '.updateEmpData', function () {
   var date = document.getElementById('edit-date').value;
   var time = document.getElementById('edit-time').value;
   var map = document.getElementById('edit-map').value;
-  var comp = document.getElementById('edit-comp').value;
 
   ref.child(emp_id).update({
     name: name,
@@ -150,7 +158,6 @@ $(document).on('click', '.updateEmpData', function () {
   $('#date_' + emp_id).html(date);
   $('#time_' + emp_id).html(time);
   $('#map_' + emp_id).html(map);
-  $('#comp' + emp_id).html(comp);
 });
 
 $(document).on('click', '.dltAllData', function () {

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-</html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +11,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="favicon.ico" />
-  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  <link rel="icon" href="../favicon.ico" />
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
 
   <script>
     // Your web app's Firebase configuration
@@ -300,48 +300,7 @@
     .modal form label {
       font-weight: normal;
     }
-    /* respo */
-    /* @media screen and (max-width: 768px) {
-      .table-wrapper {
-      background: #fff;
-      padding: 20px 25px;
-      border-radius: 3px;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    }
-
-    table.table tr th,
-    table.table tr td {
-      justify-content: center;
-      flex-direction: column;
-      border-color: #e9e9e9;
-      padding: 12px 15px;
-      vertical-align: middle;
-    }
-  .image-container.image-left {
-    margin-bottom: 220px;
-  }
-  .image-container.image-left p.blockquote {
-    margin: 0 auto;
-    position: relative;
-    right: 0;
-  }
-  .nav-tabs {
-    display: inline-block;
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    text-align: center;
-  }
-  .nav-tabs .nav-item > .nav-link {
-    margin-bottom: 5px;
-  }
-  .landing-page .section-story-overview .image-container:nth-child(2) {
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
-} */
   </style>
-</head>
 
 <body>
 <div class="container">
@@ -353,7 +312,7 @@
         <div class="col-sm-6">
           <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus"></i>
             <span>Ajouter un concert</span></a>
-            <input type="submit" id="btnLogout" value="Logout" class="btn btn-danger delAll" />
+            <input type="submit" id="btnLogout" value="Logout" class="btn btn-danger delAll"/>
         </div>
       </div>
     </div>
@@ -364,7 +323,6 @@
           <th>Date</th>
           <th>Heure</th>
           <th>Localisation</th>
-          <th>complet?</th>
         </tr>
       </thead>
       <tbody id="emp-table"></tbody>
@@ -393,10 +351,6 @@
           <div class="form-group">
             <label>Localisation</label>
             <textarea type="text" id="map" class="form-control" required></textarea>
-          </div>
-          <div class="form-group">
-            <label>complet</label>
-            <input type="text" id="comp" class="form-control" required />
           </div>
         </div>
         <div class="modal-footer">
@@ -428,10 +382,6 @@
           </div>
           <div class="form-group">
             <label>Localisation</label>
-            <input type="text" class="form-control" required />
-          </div>
-          <div class="form-group">
-            <label>Complet</label>
             <input type="text" class="form-control" required />
           </div>
         </div>
