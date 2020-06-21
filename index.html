@@ -14,7 +14,6 @@
     <link rel="icon" href="img/core-img/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script>
-      // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: 'AIzaSyB5s-pGRB7nRHNAaqm5qC6RI45JSZUsTK8',
         authDomain: 'laylow-groupe-m.firebaseapp.com',
@@ -25,11 +24,9 @@
         appId: '1:889334570799:web:bd80dc0a3346e67a17cbda',
         measurementId: 'G-C0HGPCHS1S',
       };
-      // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
-    <!-- <script src="https://npmcdn.com/parse/dist/parse.min.js"></script> -->
   </head>
   <body>
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -56,16 +53,19 @@
                     <li><a href="#A propos">A propos</a></li>
                     <li><a href="#Musique">Musique</a></li>
                     <li><a href="#Blog">Blog</a></li>
-                    <li><a href="#Clips">Clips</a></li>
-                    <li><a href="#DATES DE CONCERTS">Dates de Concerts</a></li>
+                    <li><a href="#DATES DE CONCERTS">Dates de concerts</a></li>
                     <li><a href="#Contact">Contact</a></li>
                   </ul>
                   <div class="top-social-info">
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/jey.laylow/?fbclid=IwAR1nnzVtrQ-T41JUVoAFSqhjFBJZg8kNlViLY9vJSqUVNIh8mU2_fxla2BM"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/jeylaylow?lang=fr"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/laylowdigitalova/?__tn__=%2Cd%2CP-R&eid=ARBYlptGbteMB-23wfxoaFVhXNV3Y7a_-yY6wfz3IdWdmKI8VsvpAY6sD9Oj9AgLkU12-Us-_Evqtfys"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
+                    <a href="https://open.spotify.com/album/0JMZmkRaNLaGUWayBrHOMa?autoplay=true&v=L"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/channel/UCdurFHA7O22wzSKpQCcW4eg?fbclid=IwAR1oP8pAPiCwfpp-wKZBKBlKjdDUOGug7j2PiZbH7XVL2P0tQZlRtNnce2I"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -79,13 +79,24 @@
         <!-- Single Hero Slide -->
         <div class="single-hero-slide d-flex align-items-center justify-content-center">
           <!-- Slide Img -->
+          <div class="slide-img bg-img" style="background-image: url(img/bg-img/maxresdefault-23.jpg);"></div>
+          <!-- Slide Content -->
+          <div class="hero-slides-content text-center">
+            <h2 data-animation="fadeInUp" data-delay="100ms">Laylow <span>Laylow</span></h2>
+            <p data-animation="fadeInUp" data-delay="300ms">Trinity</p>
+          </div>
+          <h2 class="big-text">Laylow</h2>
+        </div>
+
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+          <!-- Slide Img -->
           <div class="slide-img bg-img" style="background-image: url(img/bg-img/laylow-olympia.png);"></div>
           <!-- Slide Content -->
           <div class="hero-slides-content text-center">
             <h2 data-animation="fadeInUp" data-delay="100ms">Laylow <span>Laylow</span></h2>
             <p data-animation="fadeInUp" data-delay="300ms">Trinity</p>
           </div>
-          <!-- Big Text -->
           <h2 class="big-text">Laylow</h2>
         </div>
 
@@ -101,30 +112,17 @@
           <!-- Big Text -->
           <h2 class="big-text">Laylow</h2>
         </div>
-
-        <!-- Single Hero Slide -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <!-- Slide Img -->
-          <div class="slide-img bg-img" style="background-image: url(img/bg-img/COVER.jpg);"></div>
-          <!-- Slide Content -->
-          <div class="hero-slides-content text-center">
-            <h2 data-animation="fadeInUp" data-delay="100ms">Laylow <span>Laylow</span></h2>
-            <p data-animation="fadeInUp" data-delay="300ms">Trinity</p>
-          </div>
-          <!-- Big Text -->
-          <h2 class="big-text">Laylow</h2>
-        </div>
       </div>
       <div class="bg-gradients"></div>
     </section>
     <!-- a propos -->
-    <div class="about-us-area section-padding-100-0 bg-img bg-overlay" style="background-image: url(img/bg-img/laylow.jpg);" id="about">
+    <div id="A propos" class="about-us-area section-padding-100-0 bg-img bg-overlay" style="background-image: url(img/bg-img/DtrTouUWoAIvjaO.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div id="A propos" class="section-heading">
+            <div class="section-heading">
               <h2>À propos</h2>
-              <h6>une petit phrase</h6>
+              <h6>Rappeur Français</h6>
             </div>
           </div>
         </div>
@@ -133,19 +131,21 @@
           <!-- About Thumbnail -->
           <div class="col-12 col-lg-6">
             <div class="about-thumbnail mb-100">
-              <img src="img/bg-img/laylow-trinity-antidote.jpg" alt="" />
+              <img src="img/bg-img/laylow-trinity-antidote.jpg" alt="album" />
             </div>
           </div>
           <!-- About Content -->
           <div class="col-12 col-lg-6">
             <div class="about-content mb-100">
-              <h4>Salut, c'est Laylow Trinity</h4>
+              <h4>Laylow Trinity</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam quae quas nisi quibusdam placeat ullam error consequuntur, asperiores repudiandae magnam, fuga officiis? Placeat ex
-                sit ea sapiente. Maxime, quos reiciendis!
+                Est un artiste qui nous vient tout droit de Toulouse et qui a su forger un univers musical et visuel bien particulier depuis le début de sa carrière. D’abord en duo avec Sir’Klo dans
+                un style plus classique, puis sur un projet commun avec Wit beaucoup plus expérimental, il entame ensuite sa carrière solo. Laylow a fait évoluer son personnage, son univers et toute
+                sa direction artistique pour parvenir à un résultat hybride et atypique. Le 4 décembre 2018, il annonce sur ses réseaux la sortie d’un nouveau clip mais aussi d’un projet 10 titres
+                quasi-surprise, son 4ème en solo. Stratégie surprenante pour un artiste plutôt habitué à une communication classique avec plusieurs clips distillés en amont d’une sortie annoncée
+                quelques semaines auparavant.
               </p>
-              <img src="#" alt="" />
-              <p>signature en image</p>
+              <img src="img/bg-img/cimerlogo_02.png" alt="" />
             </div>
           </div>
         </div>
@@ -154,8 +154,8 @@
 
     <!-- musique -->
 
-    <div class="featured-album-area section-padding-100 clearfix">
-      <div id="Musique" class="section-heading">
+    <div id="Musique" class="featured-album-area section-padding-100 clearfix">
+      <div class="section-heading">
         <h2>Musique</h2>
       </div>
       <div class="container">
@@ -163,109 +163,99 @@
           <div class="col-12">
             <div class="featured-album-content d-flex flex-wrap">
               <!-- Album Thumbnail -->
-              <div class="album-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/YARD-Laylow-9.jpg);"></div>
+              <div class="album-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/couver.png);"></div>
               <!-- Album Songs -->
               <div class="album-songs h-100">
                 <!-- Album Info -->
                 <div class="album-info mb-50 d-flex flex-wrap align-items-center justify-content-between">
                   <div class="album-title">
-                    <h6>Album</h6>
+                    <h2>Album</h2>
                   </div>
                 </div>
-
                 <div class="album-all-songs">
                   <!-- Music Playlist -->
                   <div class="music-playlist">
                     <!-- Single Song -->
                     <div class="single-music active">
-                      <h6>Drop that beat</h6>
+                      <h6>Burning man feat Lomepal</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/Burning man feat Lomepal.mp4" />
+                      </audio>
+                    </div>
+                    <!-- Single Song -->
+                    <div class="single-music">
+                      <h6>Dehors dans la night</h6>
+                      <audio preload="auto" controls>
+                        <source src="audio/Dehors dans la night.mp4" />
+                      </audio>
+                    </div>
+                    <!-- Single Song -->
+                    <div class="single-music">
+                      <h6>TRINITY Ville</h6>
+                      <audio preload="auto" controls>
+                        <source src="audio/TRINITYville.mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Hey, Mister Dj</h6>
+                      <h6>Plug feat Jok’air</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/Plug feat Jok’air.mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Message to my future self</h6>
+                      <h6>Nakré</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/Nakré.mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Bring back the love</h6>
+                      <h6>Akanizer</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/akanizer.mp4" />
+                      </audio>
+                    </div>
+                    <!-- Single Song -->
+                    <div class="single-music">
+                      <h6>Hillz</h6>
+                      <audio preload="auto" controls>
+                        <source src="audio/Hillz.mp4" />
+                      </audio>
+                    </div>
+                    <!-- Single Song -->
+                    <div class="single-music">
+                      <h6>Megatron</h6>
+                      <audio preload="auto" controls>
+                        <source src="audio/megatron.mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Hey, Mister Dj - Remix</h6>
+                      <h6>Vamonos</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/Vamonos.mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Message to my future self</h6>
+                      <h6>Poizon</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
-                      </audio>
-                    </div>
-                    <!-- Single Song -->
-                    <div class="single-music">
-                      <h6>Drop that beat</h6>
-                      <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/WhatsApp Audio .mp4" />
                       </audio>
                     </div>
 
                     <!-- Single Song -->
                     <div class="single-music">
-                      <h6>Hey, Mister Dj</h6>
+                      <h6>Million Flowers</h6>
                       <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
-                      </audio>
-                    </div>
-
-                    <!-- Single Song -->
-                    <div class="single-music">
-                      <h6>Message to my future self</h6>
-                      <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
-                      </audio>
-                    </div>
-
-                    <!-- Single Song -->
-                    <div class="single-music">
-                      <h6>Bring back the love</h6>
-                      <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
-                      </audio>
-                    </div>
-
-                    <!-- Single Song -->
-                    <div class="single-music">
-                      <h6>Hey, Mister Dj - Remix</h6>
-                      <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
-                      </audio>
-                    </div>
-                    <div class="single-music">
-                      <h6>Message to my future self</h6>
-                      <audio preload="auto" controls>
-                        <source src="audio/dummy-audio.mp3" />
+                        <source src="audio/million.mp4" />
                       </audio>
                     </div>
                   </div>
@@ -277,10 +267,9 @@
       </div>
     </div>
     <!-- blog -->
-    <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area mt-30 section-padding-100">
+    <div id="Blog" class="blog-area mt-30 section-padding-100">
       <div class="section-heading">
-        <h2 class="blog" id="Blog">Blog</h2>
+        <h2 class="blog">Blog</h2>
       </div>
       <div class="container">
         <div class="row">
@@ -290,81 +279,95 @@
               <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="100ms">
                 <!-- Post Thumb -->
                 <div class="blog-post-thumb mb-30">
-                  <img src="img/blog-img/1.jpg" alt="" />
+                  <img src="img/bg-img/LAYLOW-MEGATRON.jpg" alt="Laylow" />
                 </div>
                 <!-- Post Title -->
-                <a href="#" class="post-title">10 Best Festival that you should’t miss this summer</a>
+                <a
+                  href="https://www.numero.com/fr/musique/interview-laylow-trinity-album-olympia-digital-mundo-rap-francais-musique-shooting-creation-originale-numero-dior-homme-louis-vuitton?fbclid=IwAR16kRWbiSZ3gXNDrA-6Y8gDFlfLEj4DLSB3Pt0O42uoHn6bpLNKscCDjF4#_"
+                  class="post-title"
+                  >Veste et tee shirt en tulle imprimé, LOUIS VUITTON.</a
+                >
                 <!-- Post Meta -->
                 <div class="post-meta d-flex justify-content-between">
                   <div class="post-date">
-                    <p>May 22, 2018</p>
+                    <p>22 mai 2020</p>
                   </div>
                   <!-- Comments -->
-                  <p class="comments"><a href="#">3 comments</a></p>
+                  <p class="comments"><a href="#">120 commentaires</a></p>
                 </div>
                 <!-- bg gradients -->
                 <div class="bg-gradients mb-30 w-25"></div>
                 <!-- Post Excerpt -->
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolorum hic tempora esse voluptatem, laudantium nam officia distinctio, ea, dicta quam minus natus ex eius impedit
-                  eum provident? Hic, eos!
+                  Celui qui réalisait des montages sur Stop PSD (l’ancêtre de Photoshop) quand il était adolescent – en détourant des photos de Lil Wayne et de 50 Cent pour ajouter des grosses
+                  voitures autour d’eux – verra très certainement sa pochette d’album détournée par ses fans. Car ceux qui écoutent Laylow ne sont pas des amateurs de rap lambda : ils n’écouteront pas
+                  Trinity entre amis, autour de quelques verres et de quelques bédos dans un studio parisien vétuste, mais plutôt tard le soir, devant un écran géant d’ordinateur, en s’imaginant au
+                  cœur d’un épisode de la série Westworld ou d'une scène de Matrix. Ils reprendront “les clés du logiciel Laylow pour se l’approprier” le détourner et peut-être même imaginer les clips
+                  alternatifs de Trinity – l'album le plus ambitieux et réussi de ce début d'année.
                 </p>
                 <!-- Read More -->
-                <a href="#" class="read-more-btn">Read more</a>
+                <a href="#" class="read-more-btn">Lire la suite</a>
               </div>
 
               <!-- Single Post Start -->
               <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="300ms">
                 <!-- Post Thumb -->
                 <div class="blog-post-thumb mb-30">
-                  <img src="img/blog-img/2.jpg" alt="" />
+                  <img src="img/bg-img/laylowUNE.jpg" alt="Laylow" />
                 </div>
                 <!-- Post Title -->
-                <a href="#" class="post-title">10 Best Festival that you should’t miss this summer</a>
+                <a href="https://revrse.fr/laylow-portrait-dun-artiste-aussi-complet-que-complexe/?fbclid=IwAR0DgEZz-Zb155GS3Z4IpOArkL4iDIeZM9ZQV8imBBMhUFHnB1fsxm5tQBw" class="post-title"
+                  >Laylow, un artiste qui se revendique comme « digital » et à l’univers décalé</a
+                >
                 <!-- Post Meta -->
                 <div class="post-meta d-flex justify-content-between">
                   <div class="post-date">
-                    <p>May 22, 2018</p>
+                    <p>20 Juin 2010</p>
                   </div>
                   <!-- Comments -->
-                  <p class="comments"><a href="#">3 comments</a></p>
+                  <p class="comments"><a href="#">100 commentaires</a></p>
                 </div>
                 <!-- bg gradients -->
                 <div class="bg-gradients mb-30 w-25"></div>
                 <!-- Post Excerpt -->
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id assumenda illum illo, distinctio, aperiam praesentium blanditiis laboriosam vero suscipit expedita quaerat omnis dolore
-                  ipsum consequuntur eligendi ducimus? Illum, necessitatibus voluptates.
+                  Un détournement lexical devenu courant en a fait dans la langue de Molière un synonyme de « numérique »… Un abus de langage, qui a fini par récolter une résonance bien plus
+                  importante dans l’imaginaire collectif. C’est donc sur cela que Laylow a décidé de baser sa carrière solo et surtout autour de cela qu’il a construit son univers. Si on exclut son
+                  début de carrière avec Sir’Klo et le projet commun avec Wit, prémisses de ses expérimentations musicales, Laylow pose les bases en 2016 avec Mercy, son premier 10 titres. Dans ce
+                  projet, on retrouve tout ce qui fait le personnage Laylow et les caractéristiques propres à sa musique : des productions futuristes et imposantes, beaucoup de saturation, une voix
+                  nappée par des effets vocaux robotiques et une articulation pas toujours évidente pour comprendre les lyrics au premier coup d’oreille. La musique de Laylow fait du bruit, elle prend
+                  de la place. Malgré quelques titres plus posés, on retiendra des morceaux oppressants comme Toyotarola ou le single entêtant No Love en featuring avec Sneazzy.
                 </p>
                 <!-- Read More -->
-                <a href="#" class="read-more-btn">Read more</a>
+                <a href="#" class="read-more-btn">Lire la suite</a>
               </div>
 
               <!-- Single Post Start -->
               <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="500ms">
                 <!-- Post Thumb -->
                 <div class="blog-post-thumb mb-30">
-                  <img src="img/blog-img/3.jpg" alt="" />
+                  <img src="img/bg-img/maxresdefault.jpg" alt="Laylow" />
                 </div>
                 <!-- Post Title -->
-                <a href="#" class="post-title">10 Best Festival that you should’t miss this summer</a>
+                <a href="https://www.thebackpackerz.com/tag/le-reglement/" class="post-title">Dans la matrice de Laylow (Analyse album Trinity) | Le Règlement</a>
                 <!-- Post Meta -->
                 <div class="post-meta d-flex justify-content-between">
                   <div class="post-date">
-                    <p>May 22, 2018</p>
+                    <p>28 mars 2020</p>
                   </div>
                   <!-- Comments -->
-                  <p class="comments"><a href="#">3 comments</a></p>
+                  <p class="comments"><a href="#">154 commentaires</a></p>
                 </div>
                 <!-- bg gradients -->
                 <div class="bg-gradients mb-30 w-25"></div>
                 <!-- Post Excerpt -->
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quidem, molestias atque unde tempora iste iusto voluptas! Numquam perspiciatis dignissimos eius iste exercitationem
-                  hic cum perferendis deserunt, ipsa veniam sunt.
+                  Le dernier épisode du Règlement est consacré à l’analyse de l’album Trinity, le surprenant projet du rappeur Laylow sorti fin février. Comme à l’accoutumée cette nouvelle vidéo de la
+                  chaine d’analyse rap français, présente un décryptage précisément documentée d’une des sorties phare de ce début 2020. On en apprend notamment davantage sur la manière dont Laylow a
+                  su, avec cet album concept, s’appuyer sur la mythologie Matrix et d’autres standards de la SF pour construire une oeuvre totale, singulière et d’une cohérence remarquable.
                 </p>
                 <!-- Read More -->
-                <a href="#" class="read-more-btn">Read more</a>
+                <a href="https://www.thebackpackerz.com/tag/le-reglement/" class="read-more-btn">Lire la suite</a>
               </div>
 
               <!-- Pagination -->
@@ -382,179 +385,31 @@
         </div>
       </div>
     </div>
-    <!-- clips -->
-    <div id="Clips" class="featured-album-area section-padding-100 clearfix">
-      <div class="section-heading">
-        <h2>Clips</h2>
-      </div>
-      <div class="container-fluid">
+    <div id="DATES DE CONCERTS" class="upcoming-shows-area section-padding-100">
+      <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="music-player-slides owl-carousel">
-              <!-- Single Music Player -->
-              <div class="single-music-player">
-                <img src="img/bg-img/mp2.jpg" alt="" />
-
-                <div class="music-info d-flex justify-content-between">
-                  <div class="music-text">
-                    <h5>Artist’s/Band Name</h5>
-                    <p>Love is all Around</p>
-                  </div>
-                  <div class="music-play-icon">
-                    <audio preload="auto" controls>
-                      <source src="audio/dummy-audio.mp3" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Music Player -->
-              <div class="single-music-player">
-                <img src="img/bg-img/mp2.jpg" alt="" />
-
-                <div class="music-info d-flex justify-content-between">
-                  <div class="music-text">
-                    <h5>Artist’s/Band Name</h5>
-                    <p>Love is all Around</p>
-                  </div>
-                  <div class="music-play-icon">
-                    <audio preload="auto" controls>
-                      <source src="audio/dummy-audio.mp3" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Music Player -->
-              <div class="single-music-player">
-                <img src="img/bg-img/mp3.jpg" alt="" />
-
-                <div class="music-info d-flex justify-content-between">
-                  <div class="music-text">
-                    <h5>Artist’s/Band Name</h5>
-                    <p>Love is all Around</p>
-                  </div>
-                  <div class="music-play-icon">
-                    <audio preload="auto" controls>
-                      <source src="audio/dummy-audio.mp3" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Single Music Player -->
-              <div class="single-music-player">
-                <img src="img/bg-img/mp4.jpg" alt="" />
-
-                <div class="music-info d-flex justify-content-between">
-                  <div class="music-text">
-                    <h5>Artist’s/Band Name</h5>
-                    <p>Love is all Around</p>
-                  </div>
-                  <div class="music-play-icon">
-                    <audio preload="auto" controls>
-                      <source src="audio/dummy-audio.mp3" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
+            <div class="section-heading">
+              <h2>DATES DE CONCERTS</h2>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="DATES DE CONCERTS" class="upcoming-shows-area section-padding-100">
-      <div class="upcoming-shows-area section-padding-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="section-heading">
-                <h2>DATES DE CONCERTS</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12">
-              <div class="upcoming-shows-content" id="datesconc">
-                <div class="single-upcoming-shows d-flex align-items-center flex-wrap" data-index="0">
-                  <div class="shows-date">
-                    <h2>castle</h2>
-                  </div>
-                  <div class="shows-desc d-flex align-items-center">
-                    <div class="shows-img"></div>
-                    <div class="shows-name">
-                      <h6>12 juin</h6>
-                    </div>
-                  </div>
-                  <div class="shows-location">
-                    <p>At the Castle</p>
-                  </div>
-                  <div class="shows-time">
-                    <p>20:30</p>
-                  </div>
-                  <div class="buy-tickets">
-                    <a href="" class="btn musica-btn">Billets</a>
-                  </div>
-                </div>
-
-                <div class="single-upcoming-shows d-flex align-items-center flex-wrap" data-index="1">
-                  <div class="shows-date">
-                    <h2>Electric</h2>
-                  </div>
-                  <div class="shows-desc d-flex align-items-center">
-                    <div class="shows-img"></div>
-                    <div class="shows-name">
-                      <h6>12 juin</h6>
-                    </div>
-                  </div>
-                  <div class="shows-location">
-                    <p>At the Castle</p>
-                  </div>
-                  <div class="shows-time">
-                    <p>20:30</p>
-                  </div>
-                  <div class="buy-tickets">
-                    <a href="" class="btn musica-btn">Billets</a>
-                  </div>
-                </div>
-
-                <div class="single-upcoming-shows d-flex align-items-center flex-wrap" data-index="2">
-                  <div class="shows-date">
-                    <h2>Festival</h2>
-                  </div>
-                  <div class="shows-desc d-flex align-items-center">
-                    <div class="shows-img"></div>
-                    <div class="shows-name">
-                      <h6>12 juin</h6>
-                    </div>
-                  </div>
-                  <div class="shows-location">
-                    <p>At the Castle</p>
-                  </div>
-                  <div class="shows-time">
-                    <p>20:30</p>
-                  </div>
-                  <div class="buy-tickets">
-                    <a href="" class="btn musica-btn">Billets</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="upcoming-shows-content" id="datesconc"></div>
           </div>
         </div>
-        <div id="add_emp"></div>
       </div>
+      <div id="add_emp"></div>
     </div>
-    <footer id="footer" class="footer-1">
+    <footer class="about-us-area section-padding-100-0 bg-img bg-overlay" style="background-image: url(img/bg-img/megatronbik.png);" id="footer" class="footer-1">
       <div id="Contact" class="main-footer widgets-dark typo-light">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3">
               <div class="widget subscribe no-box">
                 <h5 class="widget-title">Laylow<span></span></h5>
-                <p class="btn">Abonnez Vous !</p>
+                <p class="btn"><a href="https://www.lesinrocks.com/2017/09/21/musique/musique/les-rappeurs-laylow-et-wit-prets-embraser-le-siecle-des-lumieres-digitales/">Abonnez Vous !</a></p>
               </div>
             </div>
 
@@ -575,9 +430,6 @@
                     <div class="thumb-content"><a href="#Blog">Blog</a></div>
                   </li>
                   <li>
-                    <div class="thumb-content"><a href="#Clips">Clips</a></div>
-                  </li>
-                  <li>
                     <div class="thumb-content"><a href="#Contact">Contact</a></div>
                   </li>
                 </ul>
@@ -588,19 +440,28 @@
                 <h5 class="widget-title">Reséaux<span></span></h5>
                 <ul class="social-footer2">
                   <li class="">
-                    <a title="youtube" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    <a title="youtube" target="_blank" href="https://www.youtube.com/channel/UCdurFHA7O22wzSKpQCcW4eg?fbclid=IwAR1oP8pAPiCwfpp-wKZBKBlKjdDUOGug7j2PiZbH7XVL2P0tQZlRtNnce2I"
+                      ><i class="fa fa-youtube" aria-hidden="true"></i
+                    ></a>
                   </li>
                   <li class="">
-                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a
+                      href="https://www.facebook.com/laylowdigitalova/?__tn__=%2Cd%2CP-R&eid=ARBYlptGbteMB-23wfxoaFVhXNV3Y7a_-yY6wfz3IdWdmKI8VsvpAY6sD9Oj9AgLkU12-Us-_Evqtfys"
+                      target="_blank"
+                      title="Facebook"
+                      ><i class="fa fa-facebook" aria-hidden="true"></i
+                    ></a>
                   </li>
                   <li class="">
-                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/jeylaylow?lang=fr" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                   </li>
                   <li class="">
-                    <a title="instagram" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a title="instagram" target="_blank" href="https://www.instagram.com/jey.laylow/?fbclid=IwAR1nnzVtrQ-T41JUVoAFSqhjFBJZg8kNlViLY9vJSqUVNIh8mU2_fxla2BM"
+                      ><i class="fa fa-instagram" aria-hidden="true"></i
+                    ></a>
                   </li>
                   <li class="">
-                    <a title="spotify" target="_blank" href="https://www.spotify.com/"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+                    <a title="spotify" target="_blank" href="https://open.spotify.com/album/0JMZmkRaNLaGUWayBrHOMa?autoplay=true&v=L"><i class="fa fa-spotify" aria-hidden="true"></i></a>
                   </li>
                 </ul>
               </div>

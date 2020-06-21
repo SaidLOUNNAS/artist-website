@@ -1,46 +1,7 @@
-/* [Master Stylesheet - v1.0] */
-/* =========== Index of CSS ===========
-:: 1.0 Import Fonts
-:: 2.0 Import All CSS
-:: 3.0 Base CSS
-    :: 3.1.0 Spacing
-    :: 3.2.0 Height
-    :: 3.3.0 Section Padding
-    :: 3.4.0 Section Heading
-    :: 3.5.0 Preloader
-    :: 3.6.0 Miscellaneous
-    :: 3.7.0 ScrollUp
-    :: 3.8.0 Musica Button
-:: 4.0 Header Area CSS
-:: 5.0 Hero Slides Area
-:: 6.0 About Us CSS
-:: 7.0 Career Timeline CSS
-:: 8.0 Upcoming Shows Area CSS
-:: 9.0 Featured Shows Area CSS
-:: 10.0 Search Your Shows Area CSS
-:: 11.0 Music Player Area CSS
-:: 12.0 Featured Album Area CSS
-:: 13.0 Music Artists Area CSS
-:: 14.0 Services Area CSS
-:: 15.0 Footer Area CSS
-:: 16.0 Breadcumb Area CSS
-:: 17.0 CTA Area CSS
-:: 18.0 Blog Area CSS
-:: 19.0 Skills Area CSS
-:: 20.0 Contact Area CSS
-:: 21.0 Elements Area CSS
-    :: 21.1.0 Single Cool Facts CSS
-    :: 21.2.0 Accordians Area CSS
-    :: 21.3.0 Tabs Area CSS
-*/
-/* :: 1.0 Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Allura|Raleway:200,300,400,500,600,700,800,900');
-/* :: 2.0 Import All CSS */
 @import url(css/bootstrap.min.css);
 @import url(css/classy-nav.css);
 @import url(css/owl.carousel.min.css);
-/* @import url(css/animate.css); */
-/* @import url(css/magnific-popup.css); */
 @import url(css/font-awesome.min.css);
 @import url(css/audioplayer.css);
 /* :: 3.0 Base CSS */
@@ -61,7 +22,7 @@ h4,
 h5,
 h6 {
   font-family: 'Raleway', sans-serif;
-  color: #262626;
+  color: #ffffff;
   line-height: 1.3;
   font-weight: 700;
 }
@@ -290,10 +251,6 @@ table.table tr th:last-child {
   width: 100px;
 }
 
-/* table.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #0c0527;
-} */
-
 table.table th i {
   font-size: 13px;
   margin: 0 5px;
@@ -483,73 +440,6 @@ table.table .avatar {
 .modal form label {
   font-weight: normal;
 }
-/* @media screen and (min-width: 360px) {
-  .table-wrapper {
-    padding: 2px 1px;
-    border-radius: 3px;
-  }
-
-  .table-title {
-    padding-bottom: 1px;
-    color: #fff;
-    padding: 16px 30px;
-    margin: -20px -25px 10px;
-    border-radius: 3px 3px 0 0;
-  }
-
-  .table-title h2 {
-    margin: 5px 0 0;
-    font-size: 24px;
-  }
-
-  .table-title .btn-group {
-    float: right;
-  }
-
-  .table-title .btn {
-    color: #fff;
-    float: right;
-    font-size: 13px;
-    border: none;
-    min-width: 50px;
-    border-radius: 2px;
-    border: none;
-    outline: none !important;
-    margin-left: 10px;
-  }
-
-  .table-title .btn i {
-    float: left;
-    font-size: 21px;
-    margin-right: 5px;
-  }
-
-  .table-title .btn span {
-    float: left;
-    margin-top: 2px;
-  }
-
-  table.table tr th,
-  table.table tr td {
-    border-color: #e9e9e9;
-    padding: 12px 15px;
-    vertical-align: middle;
-    color: rgba(68, 255, 0, 0.815);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    font-weight: 100;
-    border-top: none;
-  }
-
-  table.table tr th:first-child {
-    width: 60px;
-  }
-
-  table.table tr th:last-child {
-    width: 100px;
-  }
-} */
-
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
@@ -606,7 +496,7 @@ table.table .avatar {
 .section-heading h6 {
   font-size: 16px;
   margin-bottom: 0;
-  color: #c5afd9;
+  color: #ffffff;
 }
 .section-heading.dark h2 {
   color: #262626;
@@ -739,8 +629,8 @@ table.table .avatar {
 /* :: 3.8.0 Musica Button */
 .musica-btn {
   background: #4bec0b;
-  background: -webkit-linear-gradient(to right, #4bec0b, #5722a9);
-  background: linear-gradient(to right, #4bec0b, #5722a9);
+  background: -webkit-linear-gradient(to right, #4bec0b, #0682e7);
+  background: linear-gradient(to right, #4bec0b,  #0682e7);
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   position: relative;
@@ -756,64 +646,6 @@ table.table .avatar {
   line-height: 42px;
   font-weight: 700;
   text-transform: uppercase;
-}
-.musica-btn:hover,
-.musica-btn:focus {
-  font-size: 12px;
-  font-weight: 700;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
-  color: #ffffff;
-}
-.musica-btn.btn-2 {
-  background: #262626;
-}
-.musica-btn.btn-2:hover,
-.musica-btn.btn-2:focus {
-  background: #bd177a;
-  box-shadow: none;
-  color: #ffffff;
-}
-.musica-btn.btn-3 {
-  color: #bd177a;
-  line-height: 42px;
-  padding: 0 15px;
-  width: 133px;
-  height: 42px;
-  border-left: 3px solid #cc1573;
-  border-right: 3px solid #5722a9;
-  background-position: 0 0, 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 3px;
-  background-image: -webkit-linear-gradient(left, #cc1573 0%, #5722a9 100%), -webkit-linear-gradient(left, #cc1573 0%, #5722a9 100%);
-  background-image: linear-gradient(to right, #cc1573 0%, #5722a9 100%), linear-gradient(to right, #cc1573 0%, #5722a9 100%);
-}
-.musica-btn.btn-3::after {
-  -webkit-transition-duration: 750ms;
-  transition-duration: 750ms;
-  color: #ffffff;
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: -webkit-linear-gradient(left, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-}
-.musica-btn.btn-3:hover,
-.musica-btn.btn-3:focus {
-  box-shadow: none;
-  color: #ffffff;
-}
-.musica-btn.btn-3:hover::after,
-.musica-btn.btn-3:focus::after {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* :: 4.0 Header Area CSS */
@@ -957,7 +789,7 @@ table.table .avatar {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .breakpoint-on .classy-navbar .classy-menu {
-    background-color: #0c0527; /*#0c0527 */
+    background-color: #0c0527;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1349,7 +1181,7 @@ table.table .avatar {
   }
 }
 .single-upcoming-shows .shows-date h2 {
-  font-size: 48px;
+  font-size: 20px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 0;
@@ -1364,7 +1196,7 @@ table.table .avatar {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .single-upcoming-shows .shows-date h2 {
-    font-size: 36px;
+    font-size: 10px;
   }
 }
 .single-upcoming-shows .shows-desc {
@@ -1545,9 +1377,6 @@ table.table .avatar {
 .single-featured-shows:hover .featured-shows-content {
   bottom: 80px;
 }
-.single-featured-shows:hover .featured-shows-content .shows-text h4 {
-  color: #bd177a;
-}
 
 .featured-shows-slides {
   position: relative;
@@ -1575,13 +1404,7 @@ table.table .avatar {
     left: 0;
   }
 }
-.featured-shows-slides .owl-prev:hover,
-.featured-shows-slides .owl-next:hover {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  color: #ffffff;
-}
+
 .featured-shows-slides .owl-next {
   left: auto;
   right: -20px;
@@ -1590,84 +1413,6 @@ table.table .avatar {
   .featured-shows-slides .owl-next {
     right: 0;
   }
-}
-
-/* :: 10.0 Search Your Shows Area CSS */
-.search-your-shows-area {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.search-your-shows-content {
-  position: relative;
-  z-index: 1;
-  margin: 200px 7% 250px 7%;
-  padding: 60px 30px;
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  opacity: 0.8;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .search-your-shows-content {
-    margin: 50px 5% 100px 5%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .search-your-shows-content {
-    margin: 50px 3% 50px 3%;
-    padding: 40px 15px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .search-your-shows-content {
-    margin: 0 5%;
-    padding: 30px 15px;
-  }
-}
-.search-your-shows-content h2 {
-  font-size: 48px;
-  color: #ffffff;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 50px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .search-your-shows-content h2 {
-    font-size: 36px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .search-your-shows-content h2 {
-    font-size: 30px;
-  }
-}
-.search-your-shows-content .search-form .form-control {
-  padding: 0 20px;
-  height: 50px;
-  background-color: #ffffff;
-  border-radius: 0;
-  font-size: 14px;
-  font-style: italic;
-  border: none;
-  width: 170px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .search-your-shows-content .search-form .form-control {
-    width: 140px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .search-your-shows-content .search-form .form-control {
-    width: 110px;
-    padding: 0 15px;
-    font-size: 12px;
-  }
-}
-.search-your-shows-content .search-form .musica-btn {
-  height: 50px;
 }
 
 /* :: 11.0 Music Player Area CSS */
@@ -1759,13 +1504,13 @@ table.table .avatar {
 .featured-album-area {
   position: relative;
   z-index: 1;
-  background-color: #0c0527;
+  background-color: #27203f ;
 }
 
 .featured-album-content {
   position: relative;
   z-index: 2;
-  background-color: #27203f;
+  background-color: #05a3ff33;
   width: 100%;
   height: 570px;
 }
@@ -1924,10 +1669,10 @@ table.table .avatar {
   margin-bottom: 0;
 }
 .featured-album-content .album-songs .single-music h6 {
-  position: absolute;
+  position: absolute;/*rgba(255, 255, 255, 0.5)*/
   font-weight: 500;
   top: 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
   right: 60px;
   left: 40px;
   z-index: auto;
@@ -1950,7 +1695,7 @@ table.table .avatar {
   left: 0;
   right: 0;
   z-index: 30;
-  background-color: #ff0000; /* #1d1633*/
+  background-color: #ff0000;
   padding: 30px 50px;
 }
 @media only screen and (max-width: 767px) {
@@ -2041,7 +1786,7 @@ table.table .avatar {
 .featured-album-content .album-songs .now-playing .audioplayer-time-current::after {
   content: '/';
   position: absolute;
-  color: #ffffff;
+  color: #5bdd04;
   font-size: 22px;
   top: -2px;
   right: -7px;
@@ -2052,7 +1797,7 @@ table.table .avatar {
 .musica-music-artists-area {
   position: relative;
   z-index: 1;
-  background-color: #ff0000; /*#0c0527*/
+  background-color: #ff0000;
 }
 .musica-music-artists-area .music-search {
   position: relative;
@@ -2178,48 +1923,6 @@ table.table .avatar {
   }
 }
 
-/* :: 14.0 Services Area CSS */
-.single-service-area .course-title {
-  position: relative;
-  margin-bottom: 30px;
-}
-.single-service-area .course-title span {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 72px;
-  font-weight: 600;
-  line-height: 1;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .single-service-area .course-title span {
-    font-size: 48px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single-service-area .course-title span {
-    font-size: 36px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .single-service-area .course-title span {
-    font-size: 30px;
-  }
-}
-.single-service-area .course-title h4 {
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 0;
-  margin-left: 20px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-}
-.single-service-area p {
-  margin-bottom: 0;
-}
-
 /* :: 15.0 Footer Area CSS */
 .footer-area {
   position: relative;
@@ -2334,64 +2037,6 @@ table.table .avatar {
   }
 }
 
-/* :: 16.0 Breadcumb Area CSS */
-.breadcumb-area {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  height: 345px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .breadcumb-area {
-    height: 270px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .breadcumb-area {
-    height: 250px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .breadcumb-area {
-    height: 220px;
-  }
-}
-.breadcumb-area .bradcumbContent {
-  position: absolute;
-  width: 392px;
-  height: 78px;
-  bottom: -39px;
-  left: 50%;
-  margin-left: -196px;
-  z-index: 100;
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  text-align: center;
-}
-@media only screen and (max-width: 767px) {
-  .breadcumb-area .bradcumbContent {
-    width: 280px;
-    margin-left: -140px;
-  }
-}
-.breadcumb-area .bradcumbContent h2 {
-  font-size: 36px;
-  color: #ffffff;
-  margin-bottom: 0;
-  line-height: 78px;
-  font-weight: 900;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .breadcumb-area .bradcumbContent h2 {
-    font-size: 30px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .breadcumb-area .bradcumbContent h2 {
-    font-size: 26px;
-  }
-}
 
 /* :: 17.0 CTA Area CSS */
 .cta-content {
@@ -2556,280 +2201,6 @@ table.table .avatar {
     height: 300px;
   }
 }
-
-/* :: 19.0 Skills Area CSS */
-.single-skils-area {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-.single-skils-area .circle {
-  position: relative;
-  z-index: 10;
-  margin-bottom: 15px;
-}
-.single-skils-area .skills-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.single-skils-area .skills-text span {
-  font-size: 24px;
-  color: #262626;
-  font-weight: 500;
-}
-.single-skils-area h5 {
-  font-size: 22px;
-}
-.single-skils-area p {
-  margin-bottom: 0;
-  font-size: 16px;
-  color: #6a6a6a;
-}
-
-/* :: 20.0 Contact Area CSS */
-.contact-content {
-  position: relative;
-  z-index: 2;
-}
-.contact-content .contact-social-info {
-  margin-bottom: 40px;
-}
-.contact-content .contact-social-info a {
-  display: inline-block;
-  margin-right: 50px;
-}
-.contact-content .contact-social-info a:hover,
-.contact-content .contact-social-info a:focus {
-  color: #bd177a;
-}
-@media only screen and (max-width: 767px) {
-  .contact-content .contact-social-info a {
-    margin-right: 20px;
-  }
-}
-.contact-content .single-contact-info {
-  position: relative;
-  margin-bottom: 30px;
-}
-.contact-content .single-contact-info:last-child {
-  margin-bottom: 0;
-}
-.contact-content .single-contact-info .icon {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50px;
-  flex: 0 0 50px;
-  max-width: 50px;
-  width: 50px;
-}
-.contact-content .contact-form-area .form-control {
-  position: relative;
-  z-index: 2;
-  height: 45px;
-  width: 100%;
-  background-color: #f3f3f3;
-  font-size: 12px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 0;
-  padding: 15px 30px;
-  font-style: italic;
-  font-weight: 700;
-  color: #bbbbbb;
-  border-bottom: 2px solid transparent;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-}
-.contact-content .contact-form-area .form-control:focus {
-  box-shadow: none;
-  border-bottom: 2px solid #bd177a;
-}
-.contact-content .contact-form-area textarea.form-control {
-  height: 180px;
-}
-
-/* :: 21.0 Elements Area CSS */
-.elements-title h2 {
-  font-weight: 900;
-  font-size: 30px;
-}
-@media only screen and (max-width: 767px) {
-  .elements-title h2 {
-    font-size: 24px;
-  }
-}
-
-/* :: 21.1.0 Single Cool Facts CSS */
-.single-cool-fact {
-  position: relative;
-  z-index: 1;
-}
-.single-cool-fact .scf-icon {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 90px;
-  flex: 0 0 90px;
-  max-width: 90px;
-  width: 90px;
-}
-.single-cool-fact .scf-text h2 {
-  font-size: 60px;
-  margin-bottom: 0;
-  font-weight: 600;
-  color: #262626;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .single-cool-fact .scf-text h2 {
-    font-size: 48px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single-cool-fact .scf-text h2 {
-    font-size: 36px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .single-cool-fact .scf-text h2 {
-    font-size: 36px;
-  }
-}
-.single-cool-fact .scf-text p {
-  font-size: 16px;
-  margin-bottom: 0;
-  color: #6a6a6a;
-  line-height: 1;
-}
-
-/* :: 21.2.0 Accordians Area CSS */
-.single-accordion.panel {
-  background-color: #ffffff;
-  border: 0 solid transparent;
-  border-radius: 4px;
-  box-shadow: 0 0 0 transparent;
-  margin-bottom: 15px;
-}
-.single-accordion:last-of-type {
-  margin-bottom: 0;
-}
-.single-accordion h6 {
-  margin-bottom: 0;
-}
-.single-accordion h6 a {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  border-radius: 0;
-  color: #ffffff;
-  display: block;
-  margin: 0;
-  padding: 20px 70px 20px 30px;
-  position: relative;
-  font-size: 14px;
-  text-transform: capitalize;
-}
-.single-accordion h6 a span {
-  background: transparent;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  font-size: 10px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 58px;
-  height: 100%;
-  color: #ffffff;
-  line-height: 58px;
-}
-.single-accordion h6 a span.accor-open {
-  opacity: 0;
-}
-.single-accordion h6 a.collapsed {
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  background: #f3f3f3;
-  color: #6a6a6a;
-}
-.single-accordion h6 a.collapsed span {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-}
-.single-accordion h6 a.collapsed span.accor-close {
-  opacity: 0;
-}
-.single-accordion h6 a.collapsed span.accor-open {
-  opacity: 1;
-}
-.single-accordion .accordion-content {
-  border-top: 0 solid transparent;
-  box-shadow: none;
-}
-.single-accordion .accordion-content p {
-  padding: 20px 15px 5px;
-  margin-bottom: 0;
-}
-
-/* :: 21.3.0 Tabs Area CSS */
-.musica-tabs-content {
-  position: relative;
-  z-index: 1;
-}
-.musica-tabs-content .nav-tabs {
-  border-bottom: none;
-  margin-bottom: 15px;
-}
-.musica-tabs-content .nav-tabs .nav-link {
-  background-color: #f3f3f3;
-  padding: 0 20px;
-  height: 58px;
-  line-height: 58px;
-  color: #6a6a6a;
-  margin: 0 2px;
-  border: none;
-  border-radius: 0;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .musica-tabs-content .nav-tabs .nav-link {
-    padding: 0 15px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .musica-tabs-content .nav-tabs .nav-link {
-    padding: 0 15px;
-    font-size: 12px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .musica-tabs-content .nav-tabs .nav-link {
-    padding: 0 15px;
-  }
-}
-.musica-tabs-content .nav-tabs .nav-link.active {
-  background: #cc1573;
-  background: -webkit-linear-gradient(to right, #cc1573, #5722a9);
-  background: linear-gradient(to right, #cc1573, #5722a9);
-  color: #ffffff;
-}
-.musica-tabs-content .musica-tab-text p span {
-  font-size: 36px;
-  font-weight: 700;
-  margin-right: 15px;
-  color: #bd1717;
-}
-.musica-tabs-content .tab-content h6 {
-  font-size: 18px;
-}
-
-/* Main Footer #252525*/
-footer .main-footer {
-  padding: 100px;
-  background: #4272ca;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4272ca), color-stop(80%, #000));
-  background: linear-gradient(#4272ca 0%, #000 80%);
-}
 footer ul {
   padding-left: 0;
   list-style: none;
@@ -2904,9 +2275,7 @@ footer.light .footer-copyright {
   display: inline-block;
 }
 
-/*====================
-	Widgets
-====================== */
+
 .widget {
   padding: 20px;
   margin-bottom: 40px;
@@ -3021,4 +2390,3 @@ ul.social-footer2 li a {
 .entry-content table td {
   display: block;
 }
-/*# sourceMappingURL=style.css.map */

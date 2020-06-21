@@ -6,18 +6,15 @@ btnSignOut.addEventListener('click', (e) => {
     .auth()
     .signOut()
     .then(function () {
-      // Sign-out successful.
       window.location = '../../admin.html';
       console.log('ok');
     })
     .catch(function (error) {
-      // An error happened.
       alert('erreur');
     });
 });
 
 const ref = firebase.database().ref('users');
-//$('#emp-table').find('tbody').html('');
 var new_html = '';
 window.onload = function () {
   initApp();
@@ -27,7 +24,6 @@ window.onload = function () {
 function initApp() {
   document.getElementById('add_emp').addEventListener('click', addNewEmp, false);
 }
-// INSERT DATA
 function addNewEmp() {
   var name = document.getElementById('name').value;
   var date = document.getElementById('date').value;
@@ -66,7 +62,6 @@ function displayEmpData() {
     $('#emp-table').html(new_html);
   });
 }
-//$('#emp-table').find('tbody').append(new_html);
 
 $(document).on('click', '.delete', function () {
   var emp_id = $(this).attr('data-emp-id');

@@ -3,7 +3,7 @@
 
   var browserWindow = $(window);
 
-  // :: 1.0 Preloader Active Code
+  // Preloader Active Code
   browserWindow.on('load', function () {
     $('.preloader').fadeOut('slow', function () {
       $(this).remove();
@@ -183,7 +183,6 @@ window.onclick = function (event) {
 };
 // add the concerts
 const ref = firebase.database().ref('users');
-//$('#emp-table').find('tbody').html('');
 var new_html = '';
 window.onload = function () {
   initApp();
@@ -193,7 +192,6 @@ window.onload = function () {
 function initApp() {
   document.getElementById('add_emp').addEventListener('click', addNewEmp, false);
 }
-// INSERT DATA
 function addNewEmp() {
   var name = document.getElementById('name').value;
   var date = document.getElementById('date').value;
@@ -231,11 +229,9 @@ function displayEmpData() {
     $('#emp-table').html(new_html);
   });
 }
-/* recuperation de bd ê */
 
 const tesref = firebase.database().ref('users');
 const data = [];
-console.log('fffffffff');
 tesref.once('value', function (snapshot) {
   snapshot.forEach(function (childSnapshot, index) {
     let childData = childSnapshot.val();
@@ -252,7 +248,7 @@ tesref.once('value', function (snapshot) {
             <div class="shows-desc d-flex align-items-center">
               <div class="shows-img"></div>
               <div class="shows-name">
-                <h6>${childData.date}</h6>
+                <p>${childData.date}</p>
               </div>
             </div>
             <div class="shows-location">
@@ -262,31 +258,8 @@ tesref.once('value', function (snapshot) {
               <p>${childData.time}</p>
             </div>
             <div class="buy-tickets">
-              <a href="" class="btn musica-btn">
-                Billets
-              </a>
-            </div>
-          </div>`;
-    } else {
-      `<div class="single-upcoming-shows d-flex align-items-center flex-wrap" data-index="0">
-            <div class="shows-date">
-              <h2>${childData.name}</h2>
-            </div>
-            <div class="shows-desc d-flex align-items-center">
-              <div class="shows-img"></div>
-              <div class="shows-name">
-                <h6>${childData.date}</h6>
-              </div>
-            </div>
-            <div class="shows-location">
-              <p>${childData.map}</p>
-            </div>
-            <div class="shows-time">
-              <p>${childData.time}</p>
-            </div>
-            <div class="buy-tickets">
-              <a href="" class="btn musica-btn">
-                Billets
+              <a href="https://www.infoconcert.com/artiste/laylow-156907/concerts.html" class="btn musica-btn">
+               Réserver
               </a>
             </div>
           </div>`;
