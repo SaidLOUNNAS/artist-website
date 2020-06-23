@@ -6,8 +6,7 @@ btnSignOut.addEventListener('click', (e) => {
     .auth()
     .signOut()
     .then(function () {
-      window.location = '../../admin.html';
-      console.log('ok');
+      window.location = '../../../../../admin.html';
     })
     .catch(function (error) {
       alert('erreur');
@@ -107,7 +106,7 @@ $(document).on('click', '.editEmp', function () {
 
     modal_body += '<div class="form-group">';
     modal_body += '<label>Heure</label>';
-    modal_body += '<input type="time" id="edit-date" value="' + emp.val().time + '" class="form-control" required>';
+    modal_body += '<input type="time" id="edit-time" value="' + emp.val().time + '" class="form-control" required>';
     modal_body += '</div>';
 
     modal_body += '<div class="form-group">';
@@ -146,7 +145,6 @@ $(document).on('click', '.updateEmpData', function () {
     date: date,
     time: time,
     map: map,
-    comp: comp,
   });
 
   $('#name_' + emp_id).html(name);

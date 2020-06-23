@@ -34,7 +34,9 @@ p {
   line-height: 2;
   font-weight: 500;
 }
-
+.site a{
+   color: #17cf3f;
+}
 a,
 a:hover,
 a:focus {
@@ -42,7 +44,7 @@ a:focus {
   transition-duration: 500ms;
   text-decoration: none;
   outline: 0 solid transparent;
-  color: #141414;
+  color: #4272ca;
   font-weight: 600;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
@@ -2355,6 +2357,7 @@ ul.social-footer2 li {
   display: inline-block;
   padding: 0;
 }
+
 
 ul.social-footer2 li a {
   display: block;

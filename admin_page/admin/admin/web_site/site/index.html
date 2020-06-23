@@ -38,14 +38,20 @@
   <style type="text/css">
     body {
       color: #566787;
-      background: #0c0527;
+       background-color: #0b2e6e;
       font-family: 'Varela Round', sans-serif;
       font-size: 13px;
+    }
+    @media (max-width: 768px){
+
+   .container {
+    width: 750px;
+       }
     }
     .table-wrapper {
       background: #fff;
       padding: 20px 25px;
-      margin: 200px 0;
+      margin: 140px 0;
       border-radius: 3px;
       box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     }
@@ -131,7 +137,7 @@
     }
 
     table.table td a:hover {
-      color: #2196F3;
+      color: #3992db;
     }
 
     table.table td a.edit {
@@ -302,7 +308,8 @@
   </style>
 
 <body>
-<div class="container">
+  <div class="img">
+<div class="container" >
   <div class="table-wrapper">
     <div class="table-title">
       <div class="row">
@@ -328,7 +335,7 @@
     </table>
   </div>
 </div>
-
+</div>
 <!-- Edit Modal HTML -->
 <div id="addEmployeeModal" class="modal">
   <div class="modal-dialog">

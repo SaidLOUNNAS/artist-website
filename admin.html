@@ -85,7 +85,7 @@
         console.log(res);
         firebase.auth().onAuthStateChanged((user) => {
           if (user) {
-            window.location = 'admin_page/admin/index.html'; //After successful login, user will be redirected to home.html
+            window.location = 'admin_page/admin/admin/web_site/site/index.html';
           } else {
             alert(e.message);
           }
@@ -96,7 +96,7 @@
         var errorCode = e.code;
         var errorMessage = e.message;
         if (errorCode != 'user') {
-          alert('vous ne pouvez pas faire ça');
+          alert('Mot de passe ou email invalide ');
         } else {
           alert(errorMessage);
         }
